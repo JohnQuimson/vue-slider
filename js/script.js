@@ -7,13 +7,7 @@ createApp({
     return {
       titoloPrincipale: 'Vue Slider',
       film: {
-        foto: [
-          'img/01.jpg',
-          'img/02.jpg',
-          'img/03.jpg',
-          'img/04.jpg',
-          'img/05.jpg',
-        ],
+        foto: ['img/01.jpg', 'img/02.jpg', 'img/03.jpg', 'img/04.jpg'],
       },
       currentImage: 0,
       info: {
@@ -22,5 +16,20 @@ createApp({
       },
     };
   },
-  methods: {},
+  methods: {
+    next() {
+      this.currentImage++;
+
+      if (this.currentImage > this.film.foto.length - 1) {
+        this.currentImage = 0;
+      }
+    },
+    prev() {
+      this.currentImage--;
+
+      if (this.currentImage < 0) {
+        this.currentImage = this.film.foto.length - 1;
+      }
+    },
+  },
 }).mount('#app');
