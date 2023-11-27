@@ -31,5 +31,8 @@ createApp({
         this.currentImage = this.film.foto.length - 1;
       }
     },
+    selectImage(indice) {
+      this.currentImage = indice;
+    },
   },
 }).mount('#app');

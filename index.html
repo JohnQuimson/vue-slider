@@ -73,7 +73,9 @@
             <img
               v-for="(image, index) in film.foto"
               :src="film.foto[index]"
-              alt=""
+              :alt="`img ${index + 1}`"
+              :class="index === currentImage ? 'activeThumbnails' : ''"
+              @click="selectImage(index)"
             />
           </div>
         </div>

@@ -35,7 +35,6 @@ h1 {
 }
 
 .item {
-  /* opacity: 0; */
   height: 100%;
   position: absolute;
   transition: all 0.5s;
@@ -115,12 +114,12 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.3);
+  filter: brightness(0.6);
 }
 
-.active-thumbnails img {
+.activeThumbnails {
   filter: brightness(1);
-  border: 2px solid white;
+  border: 2px solid red;
 }
 
 .elem-raccolta:hover {
