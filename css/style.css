@@ -102,8 +102,13 @@ h1 {
   position: absolute;
 }
 
+.thumbnails {
+  height: 500px;
+}
+
 .elem-raccolta {
-  height: calc(500px / 5);
+  height: calc(500px / 4);
+  width: 300px;
 }
 
 .elem-raccolta img {
@@ -174,9 +179,9 @@ button:hover {
   font-family: 'Marhey', sans-serif;
 }
 
-/* .stato > * {
+.stato > * {
   display: none;
-} */
+}
 
 .stato-active {
   display: block;

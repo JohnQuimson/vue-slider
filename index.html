@@ -60,19 +60,25 @@
             </div>
           </div>
           <!-- Bottoni -->
-
           <div class="prev" @click="prev">
             <i class="fa-solid fa-chevron-left"></i>
           </div>
           <div class="next" @click="next">
             <i class="fa-solid fa-chevron-right"></i>
           </div>
-
-          <!-- DIV con le img -->
         </div>
-        <div class="items-thumbnails"></div>
+        <!-- items-thumbnails -->
+        <div class="thumbnails">
+          <div class="elem-raccolta">
+            <img
+              v-for="(image, index) in film.foto"
+              :src="film.foto[index]"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
-      <div class="btns-play d-flex justify-content-center gap-5">
+      <!-- <div class="btns-play d-flex justify-content-center gap-5">
         <button class="stop text-uppercase">
           <i class="fa-solid fa-stop"></i>
         </button>
@@ -87,18 +93,7 @@
         <div class="stato-elem stato-stop">Autoplay stop</div>
         <div class="stato-elem stato-play stato-active">Autoplay attivo</div>
         <div class="stato-elem stato-reverse">Reverse autoplay attivo</div>
-      </div>
-
-      <!-- TEMPLATES -->
-      <!-- principale -->
-      <template id="template-princ"> </template>
-      <!-- thumbnails -->
-      <template id="template-thumbnails">
-        <div class="elem-raccolta">
-          <img src="" alt="" />
-        </div>
-      </template>
-      <!-- /TEMPLATES -->
+      </div> -->
     </div>
 
     <!-- Collegamento VUE -->
