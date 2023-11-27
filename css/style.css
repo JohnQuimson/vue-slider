@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0e17;
+  color: white;
+}
+
+.jq-bordo {
+  border: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 3.125rem;
+  font-family: 'Marhey', sans-serif;
+}
+
+.container {
+  margin: 6.25rem auto;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.items {
+  position: relative;
+  width: 1000px;
+  height: 500px;
+}
+
+.item {
+  opacity: 0;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  position: relative;
+  bottom: 70px;
+  right: 10px;
+  text-align: end;
+}
+
+.item.active {
+  opacity: 1;
+}
+
+.prev,
+.next {
+  width: 30px;
+  height: 30px;
+  margin: 10px 0;
+  border-radius: 50%;
+  background: #ccc;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+  z-index: 999;
+  color: black;
+}
+
+.next i,
+.prev i {
+  line-height: 30px;
+}
+
+.prev {
+  transform: translate(50%);
+}
+
+.next {
+  right: 0;
+}
+
+.prev::after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.next::before {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.elem-raccolta {
+  height: calc(500px / 5);
+}
+
+.elem-raccolta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.3);
+}
+
+.active-thumbnails img {
+  filter: brightness(1);
+  border: 2px solid white;
+}
+
+.elem-raccolta:hover {
+  cursor: pointer;
+}
+
+.btns-play {
+  margin: -50px 0 50px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.stop {
+  background-color: #a7a9be;
+  color: #0f0e17;
+}
+
+button.play {
+  background-color: #ff8906;
+  color: white;
+}
+
+button.reverse {
+  background-color: #a7a9be;
+  color: #0f0e17;
+}
+
+button.stop:focus {
+  background-color: #5a5b64;
+  color: #434247;
+}
+
+button.play:focus {
+  background-color: #64421b;
+  color: rgb(121, 121, 121);
+}
+
+button.reverse:focus {
+  background-color: #5a5b64;
+  color: #434247;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+.stato {
+  display: flex;
+  justify-content: center;
+  font-family: 'Marhey', sans-serif;
+}
+
+.stato > * {
+  display: none;
+}
+
+.stato-active {
+  display: block;
+}
