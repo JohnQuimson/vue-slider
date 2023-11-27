@@ -44,59 +44,62 @@
     ></script>
     <!-- /Boostrap JS -->
 
-    <div id="app">{{ message }}</div>
-    <h1 class="text-uppercase">Carosello Array di Oggetti</h1>
+    <div id="app" v-cloak>
+      <h1 class="text-uppercase">{{ titoloPrincipale }}</h1>
 
-    <div class="container">
-      <div class="items">
-        <!-- Bottoni -->
+      <div class="container">
+        <div class="items">
+          <div class="item">
+            <img
+              :src="film.foto[currentImage]"
+              alt="`Immagine ${currentImage}`"
+            />
+            <div class="info">
+              <h3>{{ info.titolo }}</h3>
+              <p>{{ info.description }}</p>
+            </div>
+          </div>
+          <!-- Bottoni -->
 
-        <div class="prev">
-          <i class="fa-solid fa-chevron-left"></i>
+          <div class="prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <!-- DIV con le img -->
         </div>
-        <div class="next">
-          <i class="fa-solid fa-chevron-right"></i>
-        </div>
+        <div class="items-thumbnails"></div>
+      </div>
+      <div class="btns-play d-flex justify-content-center gap-5">
+        <button class="stop text-uppercase">
+          <i class="fa-solid fa-stop"></i>
+        </button>
+        <button class="play text-uppercase">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="reverse text-uppercase">
+          <i class="fa-solid fa-rotate"></i>
+        </button>
+      </div>
+      <div class="stato">
+        <div class="stato-elem stato-stop">Autoplay stop</div>
+        <div class="stato-elem stato-play stato-active">Autoplay attivo</div>
+        <div class="stato-elem stato-reverse">Reverse autoplay attivo</div>
+      </div>
 
-        <!-- DIV con le img -->
-      </div>
-      <div class="items-thumbnails"></div>
-    </div>
-    <div class="btns-play d-flex justify-content-center gap-5">
-      <button class="stop text-uppercase">
-        <i class="fa-solid fa-stop"></i>
-      </button>
-      <button class="play text-uppercase">
-        <i class="fa-solid fa-play"></i>
-      </button>
-      <button class="reverse text-uppercase">
-        <i class="fa-solid fa-rotate"></i>
-      </button>
-    </div>
-    <div class="stato">
-      <div class="stato-elem stato-stop">Autoplay stop</div>
-      <div class="stato-elem stato-play stato-active">Autoplay attivo</div>
-      <div class="stato-elem stato-reverse">Reverse autoplay attivo</div>
-    </div>
-
-    <!-- TEMPLATES -->
-    <!-- principale -->
-    <template id="template-princ">
-      <div class="item">
-        <img src="" alt="" />
-        <div class="info">
-          <h3></h3>
-          <p></p>
+      <!-- TEMPLATES -->
+      <!-- principale -->
+      <template id="template-princ"> </template>
+      <!-- thumbnails -->
+      <template id="template-thumbnails">
+        <div class="elem-raccolta">
+          <img src="" alt="" />
         </div>
-      </div>
-    </template>
-    <!-- thumbnails -->
-    <template id="template-thumbnails">
-      <div class="elem-raccolta">
-        <img src="" alt="" />
-      </div>
-    </template>
-    <!-- /TEMPLATES -->
+      </template>
+      <!-- /TEMPLATES -->
+    </div>
 
     <!-- Collegamento VUE -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

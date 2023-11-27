@@ -35,7 +35,7 @@ h1 {
 }
 
 .item {
-  opacity: 0;
+  /* opacity: 0; */
   height: 100%;
   position: absolute;
   transition: all 0.5s;
@@ -174,9 +174,9 @@ button:hover {
   font-family: 'Marhey', sans-serif;
 }
 
-.stato > * {
+/* .stato > * {
   display: none;
-}
+} */
 
 .stato-active {
   display: block;
